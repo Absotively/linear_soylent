@@ -107,7 +107,7 @@ if len(amounts) > ingredient_count:
 		if amounts[i + ingredient_count]:
 			if target_list[i].endswith("_max"):
 				problems[target_list[i][0:-4]] = "OVER"
-				nutrient_amounts[i] -= amounts[i + ingredient_count]
+				nutrient_amounts[i] += amounts[i + ingredient_count]
 			else:
 				problems[target_list[i]] = "UNDER"
 				nutrient_amounts[i] -= amounts[i + ingredient_count]
